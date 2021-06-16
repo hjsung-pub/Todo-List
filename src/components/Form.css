@@ -1,0 +1,65 @@
+.form{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align:end;
+    -ms-flex-align:end;
+     align-items:flex-end;
+}
+.form input{
+    -webkit-box-flex: 1;-ms-flex: 1;flex: 1;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffd476;
+}
+.create-button{
+    padding: 1rem 1.5rem;
+    margin-left: 1rem;
+    background-color: #fab005;
+    border-radius: 3px;
+    color:#fff;
+    font-weight: 600;
+    cursor: pointer;
+    border:0;
+}
+.create-button:hover{
+    background-color: #fca504;
+}
+
+.color-select-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #fab005;
+}
+.color-select-list li{
+    list-style: none;
+}
+.color-select-list li + li{margin-left:1rem;}
+.color-select-list li button{
+    width: 4rem;
+    height: 4rem;
+    opacity: .5;
+    transition: all .5s;
+}
+.color-select-list li button:hover{
+    opacity: .75;
+}
+
+.color-select-list li button.active,
+.color-select-list li button:active{
+    opacity: 1;
+}

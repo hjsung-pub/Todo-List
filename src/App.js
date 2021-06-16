@@ -50,7 +50,6 @@ class App extends Component {
 
   handleToggle = (id) =>{
     const {todos} = this.state;
-
     // 파라미터로 받은 id를 가지고 몇번째 아이템인지 찾습니다. 
     const index = todos.findIndex(todo => todo.id === id);
     const selected = todos[index]; //선택한 객체
@@ -62,7 +61,7 @@ class App extends Component {
       ...selected,
       checked: !selected.checked
     };
-    
+
     this.setState({
       todos : nextTodos
     })
@@ -99,6 +98,7 @@ class App extends Component {
         onKeyPress={handleKeyPress}
         onChange={handleChange}
         onCreate={handleCreate}
+        color={color}
       />
       )} palette= {(
       <Palette
@@ -107,7 +107,7 @@ class App extends Component {
         onSelect={handleSelect}
       />
       )}>
-        <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRomve}/>
+        <TodoItemList todos={todos} color={color} onToggle={handleToggle} onRemove={handleRomve}/>
       </TodoListTemplate>
     );
   }

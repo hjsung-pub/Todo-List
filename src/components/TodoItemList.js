@@ -12,14 +12,14 @@ export default class TodoItemList extends Component {
 
     render() {                                       
         //todos:todo 객체들이 들어있는 배열, onToggle:체크박스를 키고 끄는 함수, onRemove : 아이켐을 삭제시키는 함수                           
-        const {todos, onToggle, onRemove} = this.props;
-
+        const {todos, color, onToggle, onRemove} = this.props;
         const todoList = todos.map(
             ({id, text, checked}) => (
                 <TodoItem 
                  id={id} 
                  text={text} 
                  checked={checked} 
+                 color={color}
                  onToggle={onToggle}
                  onRemove={onRemove}
                  key={id}

@@ -12,3 +12,7 @@ css
 
 # 블로그URL
 > https://velopert.com/3480
+
+
+# 확인URL
+> https://hjsung-pub.github.io/Todo-List/
